@@ -1,0 +1,44 @@
+:root {
+    --size: 150px;
+}
+
+table, tbody {
+    display: block;
+    width: calc(var(--size) * 3);
+}
+
+.cell-row {
+    border: 1px solid #000;
+    aspect-ratio: 1;
+}
+
+.cell {
+    border: 1px solid #000;
+    width: var(--size);
+    height: var(--size);
+    aspect-ratio: 1;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#board[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#board:not([disabled]) .cell:hover {
+    background-color: #f0f0f0;
+}
+
+.X {
+    color: #f00 !important;
+}
+
+.cell.X, .cell.O {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.O {
+    color: #00f !important;
+}
